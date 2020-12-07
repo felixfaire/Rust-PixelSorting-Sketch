@@ -4,6 +4,10 @@ use std::path::Path;
 mod pixel_sort;
 mod area_glitch;
 
+/**
+ * This command line application loads an image file and manipulates the pixels
+ * saving to an output folder.
+ */
 fn main() {
   
   let mut filename = String::new();
@@ -22,13 +26,14 @@ fn main() {
     _ => false
   };
 
-  
   multi_output_pixelsort(filename, 10, 150, 200, vertical);
   
-
 }
 
-
+/**
+ * This function takes the input image and save out multiple moshed images
+ * at different sorting depths and thresholds.
+ */
 fn multi_output_pixelsort(filename: String, num_iterations: u32, min: u8, max: u8, vertical: bool) {
 
   let max = max as u32;

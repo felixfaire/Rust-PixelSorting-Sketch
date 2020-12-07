@@ -31,6 +31,9 @@ impl Area {
   }
 }
 
+/**
+ * This function cuts out and rearranges various rectangles of pixels (of different sizes) within the image
+ */
 pub fn shuffle_areas(img: &mut DynamicImage, num_times: u32) {
 
   let dims = img.dimensions();
